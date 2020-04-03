@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/badge/dependencies-up%20to%20date-lime.svg) 
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/43e254496d3b47bfa046fa33a66f3a8d)](https://app.codacy.com/manual/AlQaholic007/vite.js?utm_source=github.com&utm_medium=referral&utm_content=AlQaholic007/vite.js&utm_campaign=Badge_Grade_Dashboard)
 ![](https://img.shields.io/badge/Created%20by-AlQaholic007-1abc9c.svg) [![Actions Status](https://github.com/AlQaholic007/vite.js/workflows/GitCI/badge.svg?cache=2)](https://github.com/AlQaholic007/vite.js/actions)
 
 ## Install
