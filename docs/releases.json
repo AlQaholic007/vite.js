@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "state": "stable",
+  "scope": "minor feature",
+  "changes": "Adding routes feature",
+  "download": "https://npmjs.com/package/vite.js"
+}

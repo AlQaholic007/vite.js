@@ -1,0 +1,71 @@
+{
+  "name": "vite.js",
+  "version": "1.0.0",
+  "description": "The simplest way to bootstrap a nodejs server and dive straight into coding.",
+  "main": "./lib/index.js",
+  "author": "AlQaholic007 <mail@sohamp.dev>",
+  "repository": "git://github.com/AlQaholic007/vite.js.git",
+  "bugs": {
+    "url": "https://github.com/AlQaholic007/tracker/issues"
+  },
+  "homepage": "https://github.com/AlQaholic007/vite.js",
+  "keywords": [
+    "vite.js",
+    "vitejs",
+    "vite-js",
+    "vite js",
+    "vite",
+    "js",
+    "express",
+    "mongodb",
+    "mongoose",
+    "ejs",
+    "easy",
+    "logging",
+    "node",
+    "node js",
+    "nodejs",
+    "javascript",
+    "js",
+    "npm",
+    "npm-scripts",
+    "npmjs"
+  ],
+  "scripts": {
+    "test": "mocha ./src/test/test.js --exit --timeout Infinity",
+    "dev": "node ./src/dev.js",
+    "start-release": "npm run start-build; npm publish",
+    "start-build": "sudo babel ./src -d ./lib --ignore socket.io.js; sudo cp ./src/test/public/socket.io.js ./lib/test/public/; sudo cp -r ./src/test/views ./lib/test/views"
+  },
+  "bin": {
+    "vite": "./lib/cli/index.js",
+    "vite-dev": "./src/cli/index.js"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-runtime": "^6.26.0",
+    "body-parser": "^1.19.0",
+    "chalk": "^2.4.2",
+    "connect-mongo": "^3.1.2",
+    "cookie-parser": "^1.4.4",
+    "enmap": "3.1.4",
+    "enmap-mongo": "^2.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "file-system": "^2.2.2",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7",
+    "prompts": "^2.3.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "axios": "^0.19.0",
+    "mocha": "^6.2.2",
+    "open": "^6.4.0"
+  },
+  "license": "MIT"
+}
