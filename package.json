@@ -1,6 +1,6 @@
 {
   "name": "vite.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The simplest way to bootstrap a nodejs server and dive straight into coding.",
   "main": "./lib/index.js",
   "author": "AlQaholic007 <mail@sohamp.dev>",
