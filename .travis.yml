@@ -5,5 +5,4 @@ node_js:
 services: 
   - mongodb
 before_script:
-  - mongod
   - npm install --save-dev
