@@ -3,5 +3,8 @@ language: node_js
 cache: npm
 node_js:
   - 12
+services: 
+  - mongodb
 before_script:
+  - mongod
   - npm install --save-dev
