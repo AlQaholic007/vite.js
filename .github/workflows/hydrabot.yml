@@ -1,23 +1,10 @@
 version: 2
-mergeable:
+hydrabot:
   - when: pull_request.*
     validate:
       - do: title
         must_exclude:
-          regex: "wip|work in progress"
+          regex: ^\[WIP\]
       - do: label
         must_exclude:
-          regex: "wip|work in progress"
-    pass:
-      - do: checks
-        status: success
-        payload:
-          title: Success!!
-          summary: "{{#results}}- {{message.pass}} {{/results}}"
-    fail:
-      - do: checks
-        status: failure
-        payload:
-          title: Fail!!
-          summary: >
-            The following errors have occured {{#results}}- {{message.fail}} {{/results}}
+          regex: 'wip'
