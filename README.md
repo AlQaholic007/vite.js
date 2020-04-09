@@ -277,7 +277,7 @@ app.get("/", function(req, res) {
 
 ## Authors
 
-- AlQaholic007 <mail@sohamp.dev>
+- AlQaholic007 <mail@sohamp.dev, soham.parekh1998@gmail.com>
 
 ## License
 
