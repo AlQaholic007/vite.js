@@ -4,7 +4,31 @@ hydrabot:
     validate:
       - do: title
         must_exclude:
-          regex: ^\[WIP\]
+          regex: 'wip|work in progress'
       - do: label
         must_exclude:
-          regex: 'wip'
+          regex: 'wip|work in progress'
+    pass:
+      - do: checks
+        status: success
+        payload:
+          title: Success!!
+          summary: '{{#results}}- {{message.pass}} {{/results}}'
+    fail:
+      - do: checks # default fail case
+  status: 'failure' # Can be: success, failure, neutral, cancelled, timed_out, or action_required
+  payload:
+    title: 'Hydrab0t Run have been Completed!'
+    summary: |
+         ### Status: {{toUpperCase validationStatus}}
+              Here are some stats of the run:
+              {{validationCount}} validations were ran.
+              {{passCount}} PASSED
+              {{failCount}} FAILED
+    text: "{{#each validationSuites}}\n
+          #### {{{statusIcon status}}} Validator: {{toUpperCase name}}\n
+          {{#each validations }} * {{{statusIcon status}}} ***{{{ description }}}***\n
+                 Input : {{{details.input}}}\n
+                 Settings : {{{displaySettings details.settings}}}\n
+                 {{/each}}\n
+          {{/each}}"
